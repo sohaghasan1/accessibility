@@ -1,0 +1,650 @@
+html {
+  scroll-behavior: smooth;
+  overflow-x: hidden;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+/* Scrollbar Styling */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background-color: #ebebeb;
+}
+
+::-webkit-scrollbar-thumb {
+  border-radius: 111px;
+  background: var(--titleColor);
+}
+
+body {
+  background-color: #ffffff;
+}
+
+::selection {
+  background-color: black;
+  color: #fff;
+}
+
+:root {
+  --titleColor: #20252b;
+  --textColor: #575e65;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+ul,
+li,
+a {
+  margin: 0;
+  padding: 0;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: "Nunito", sans-serif;
+  color: var(--titleColor);
+}
+
+section {
+  padding: 50px 0;
+}
+
+p {
+  font-family: "Arimo", sans-serif;
+  color: var(--textColor);
+}
+
+/* header style */
+header {
+  padding: 20px 0;
+}
+
+.logo {
+  color: black;
+  font-size: 1.5rem;
+  font-weight: 700;
+}
+
+header ul {
+  column-gap: 24px;
+}
+
+header ul li {
+  list-style: none;
+}
+
+header ul li a {
+  background-color: black;
+  width: 40px;
+  height: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 100px;
+  text-decoration: none;
+  transition: all .2s ease-out;
+}
+
+header ul li a:hover {
+  border: 1px solid black;
+  background-color: transparent;
+}
+
+header ul a i {
+  color: #fff;
+  font-size: 1.5rem;
+  transition: all .2s ease-out;
+}
+
+header ul a:hover i {
+  color: black;
+}
+
+/* banner style st */
+.banner {
+  min-height: 90vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.banner_content h1 {
+  font-size: 4.5rem;
+  line-height: 7rem;
+  margin-bottom: 1rem;
+  font-weight: 500;
+}
+
+.banner_content p {
+  font-size: 1.375rem;
+}
+
+.banner_img {
+  text-align: end;
+}
+
+/* out people style */
+.our_people h1 {
+  font-size: 5.25rem;
+  margin-bottom: 100px;
+  font-weight: 500;
+}
+
+.section_title h2 {
+  font-size: 4rem;
+  position: relative;
+  margin-bottom: 30px;
+  padding-bottom: 5px;
+}
+
+.section_title h2::after {
+  content: "";
+  width: 100%;
+  height: 1px;
+  background: #343d46;
+  position: absolute;
+  left: 0;
+  bottom: 0;
+}
+
+.our_padding {
+  padding: 0;
+}
+
+.portfolio-link{
+  display: flex;
+  justify-content: center;
+  gap: 5px;
+  align-items: center;
+}
+.portfolio-link a{
+  text-align: center;
+  text-transform: capitalize;
+  font-size: 1.125rem;
+  text-decoration: none;
+  color: var(--titleColor);
+  font-weight: 600;
+}
+
+
+/* postdocs style */
+.postdocs_content h3 {
+  font-size: 2.5rem;
+  font-weight: 700;
+}
+
+.postdocs_content h4 {
+  font-size: 1.75rem;
+  margin: 10px 0;
+}
+
+.postdocs_content p {
+  font-size: 1.375rem;
+  max-width: 545px;
+  margin-bottom: 2rem;
+}
+
+.personal_website_link {
+  color: var(--titleColor);
+  text-decoration: none;
+  font-size: 1rem;
+  font-weight: 700;
+  position: relative;
+  padding-bottom: 10px;
+}
+
+.personal_website_link::after
+{
+  position: absolute;
+  content: "";
+  background: var(--titleColor);
+  height: 1px;
+  width: 0%;
+  bottom: 0;
+  left: 0;
+  transition: all .1s ease-out;
+}
+
+.personal_website_link:hover::after {
+  width: 100%;
+}
+
+.secound_row_position {
+  top: -70px;
+}
+
+.postdocs_img_position {
+  left: -120px;
+}
+
+/* phd student style */
+.phd {
+  padding: 50px 0;
+}
+
+.single_student_card h3 {
+  font-weight: 400;
+  font-size: 1.6rem;
+  margin: 10px 0;
+}
+
+.phd .owl-nav {
+  position: absolute;
+  bottom: -70px;
+  right: 8px;
+  display: flex;
+  column-gap: 15px;
+}
+
+.phd .owl-nav button {
+  background: var(--titleColor) !important;
+  display: inline-block;
+  width: 40px;
+  height: 40px;
+  color: white !important;
+  border-radius: 100px;
+  font-size: 22px !important;
+  border: 1px solid var(--titleColor);
+}
+.phd .owl-nav button:hover{
+  color:var(--titleColor) !important;
+  border: 1px solid var(--titleColor);
+  background-color: transparent !important;;
+}
+.phd .owl-carousel .owl-stage-outer {
+  padding-bottom: 10px;
+}
+
+/* Publications style */
+
+.publications .section_title h2::after,
+.recent .section_title h2::after,
+.academic .section_title h2::after,
+.teaching .section_title h2::after,
+.work .section_title h2::after,
+.projects .section_title h2::after,
+.news .section_title h2::after {
+  display: none;
+}
+
+.publication_content {
+  max-width: 700px;
+}
+
+.publication_content h3 {
+  font-size: 2rem;
+  line-height: 45px;
+}
+
+.publication_content p {
+  margin: 20px 0;
+}
+
+.publication_content_one {
+  margin-left: 60px;
+}
+
+.cusotm_row_gap {
+  row-gap: 100px;
+}
+
+.btn_view {
+  background: transparent;
+  border: 1px solid var(--titleColor);
+  padding: 12px 25px;
+  color: var(--titleColor);
+  font-size: 1.1rem;
+  font-weight: 700;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 15px;
+  margin: 70px auto 0;
+  transition: all 0.125s ease-out;
+}
+
+.btn_view:hover {
+  transform: scale(0.95);
+}
+
+/* Most recent style */
+.rec_content ul {
+  display: flex;
+}
+
+.rec_content ul li:first-child {
+  margin-left: 0;
+}
+
+.rec_content ul li {
+  list-style: none;
+  margin-left: -15px;
+}
+
+.rec_content h2 {
+  font-size: 2.5rem;
+  font-weight: 700;
+  margin-bottom: 30px;
+}
+
+.rec_content p {
+  font-size: 1.375rem;
+  line-height: 30px;
+  max-width: 700px;
+}
+
+.mb_30 {
+  margin-bottom: 30px;
+}
+
+.padding_left_right {
+  padding: 0 80px;
+}
+
+.recent_carousel .owl-nav .owl-prev {
+  position: absolute !important;
+  top: 50%;
+  transform: translateY(-50%);
+  left: -70px;
+  background: transparent !important;
+  width: 40px;
+  height: 40px;
+  border-radius: 100px;
+  color: var(--titleColor) !important;
+  font-size: 20px !important;
+  transition: background 0.2s ease-out;
+}
+
+.recent_carousel .owl-nav {
+  display: block !important;
+}
+
+.recent_carousel .owl-nav .owl-next {
+  position: absolute !important;
+  top: 50%;
+  transform: translateY(-50%);
+  right: -70px;
+  background: transparent !important;
+  width: 40px;
+  height: 40px;
+  border-radius: 100px;
+  color: var(--titleColor) !important;
+  font-size: 20px !important;
+  transition: background 0.2s ease-out;
+}
+
+.recent_carousel .owl-nav .owl-next:hover,
+.recent_carousel .owl-nav .owl-prev:hover {
+  background: black !important;
+}
+
+.recent_carousel .owl-nav .owl-prev:hover i,
+.recent_carousel .owl-nav .owl-next:hover i {
+  color: white !important;
+}
+
+/* academic book style */
+.single_produtc {
+  text-align: center;
+}
+
+.single_produtc h4 {
+  font-size: 1.65rem;
+  font-weight: 600;
+  margin: -20px 0px 20px;
+}
+
+.product_btn {
+  background: transparent;
+  border: 1px solid var(--titleColor);
+  border-radius: 100px;
+  padding: 13px 25px;
+  width: 95%;
+  font-size: 1.1rem;
+  font-weight: 700;
+  transition: all 0.3s ease-out;
+}
+
+.product_btn:hover {
+  background-color: var(--titleColor);
+  color: #fff;
+}
+
+/* Teaching style */
+.teaching .accordion-button::after {
+  background-image: url(../images/minus-sign.png);
+}
+
+.teaching .accordion-button.collapsed::after {
+  background-image: url(../images/plus.png);
+}
+
+.custom_border {
+  border-top: 1px solid;
+  padding: 20px 0;
+}
+
+.custom_border:last-child {
+  border-bottom: 1px solid black;
+}
+
+.teaching .section_title {
+  margin-bottom: 50px;
+}
+
+.teach_accor_image img {
+  max-height: 140px;
+}
+
+.teaching .accordion-button:not(.collapsed) {
+  background-color: transparent;
+  box-shadow: none;
+}
+
+.teaching .accordion-item:last-of-type>.accordion-header .accordion-button.collapsed,
+.accordion-item:first-of-type>.accordion-header .accordion-button {
+  border-radius: 0;
+  padding: 0;
+}
+
+.teach_card h2 {
+  font-size: 2.2rem;
+  font-weight: 700;
+}
+
+.teach_card h1 {
+  font-size: 4.2rem;
+  font-weight: 500;
+}
+
+/* work style */
+.work_body {
+  margin-top: 60px;
+}
+
+.work .accordion-button:focus {
+  box-shadow: none;
+}
+
+.work .accordion-button:not(.collapsed) {
+  background-color: transparent;
+  box-shadow: none;
+}
+
+.work .accordion-item {
+  border: none;
+}
+
+.work .accordion-button {
+  padding: 0;
+  border-bottom: 2px solid #343d4689;
+}
+
+.acco_primary_title {
+  font-size: 3rem;
+  padding-bottom: 15px;
+}
+
+.work .accordion-item:last-of-type>.accordion-header .accordion-button.collapsed {
+  border-radius: 0;
+}
+
+.accordion_body_title {
+  font-size: 2rem;
+  font-weight: 700;
+  margin: 30px 0px 5px;
+}
+
+.accordion_body_text {
+  font-size: 1.25rem;
+}
+
+.accordion_body_top_header {
+  font-size: 2rem;
+  font-weight: 700;
+  margin: 30px 0px 20px;
+}
+
+/* footer style */
+footer {
+  border-top: 2px solid #20252b7e;
+  overflow-x: hidden;
+}
+
+.primary_footer {
+  padding-top: 75px;
+  padding-bottom: 85px;
+
+}
+
+.footer_card_text {
+  font-size: 1.25rem;
+}
+
+.footer_card_title {
+  font-size: 2rem;
+  font-weight: 700;
+  margin-bottom: 45px;
+}
+
+.f_link {
+  text-decoration: none;
+  font-weight: 700;
+  color: var(--titleColor);
+  padding-bottom: 5px;
+}
+
+.f_link_wrap {
+  display: flex;
+  align-items: center;
+  column-gap: 10px;
+  margin-top: 45px;
+  width: fit-content;
+  border-bottom: 1px solid;
+}
+
+.footer_content_profile {
+  display: flex;
+  column-gap: 20px;
+}
+
+.f_left_img {
+  width: 55px;
+}
+
+.f_right_content {
+  width: auto;
+}
+
+.f_right_content h2 {
+  font-size: 1.6rem;
+  font-weight: 400;
+  margin-top: 10px;
+}
+
+.footer_social_link {
+  display: flex;
+  column-gap: 60px;
+}
+
+.footer_social_link li {
+  list-style: none;
+}
+
+.footer_social_link li a {
+  text-decoration: none;
+}
+
+.footer_social_link li a i {
+  color: var(--titleColor);
+  font-size: 42px;
+}
+
+.footer_content_address {
+  margin-top: 33px;
+}
+
+.footer_content_address li {
+  list-style: none;
+  line-height: 40px;
+
+}
+
+.footer_content_address p {
+  font-size: 1.25rem;
+}
+
+.f_right_content .f_link_wrap {
+  margin-top: 20px;
+}
+
+.secondary_footer {
+  padding: 30px 0;
+  border-top: 1px solid #20252b7e;
+  font-size: 1.25rem;
+}
+
+/* Recent News style */
+.news_card {
+  padding: 10px 20px;
+  border: 1px solid var(--textColor);
+  margin-bottom: 30px;
+}
+
+.news_card span {
+  display: block;
+  text-align: end;
+  color: var(--textColor);
+  font-family: "Nunito", sans-serif;
+}
+
+.news_card p {
+  font-size: 1.4rem;
+  color: var(--titleColor);
+  margin: 10px 0px 20px;
+}
+
+.news_card a {
+  text-decoration: none;
+  color: var(--titleColor);
+  display: flex;
+  gap: 15px;
+  align-items: center;
+  font-weight: 700;
+  text-transform: capitalize;
+}
